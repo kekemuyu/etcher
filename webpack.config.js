@@ -51,7 +51,7 @@ module.exports = {
       // on the tree (for testing purposes) or inside a generated
       // bundle (for production purposes), by translating
       // relative require paths within the bundle.
-      if (/\/(etcher-sdk|sdk|shared)/i.test(request) || /package\.json$/.test(request)) {
+      if (/\/(etcher-sdk|shared)/i.test(request) || /package\.json$/.test(request)) {
         const output = path.join(__dirname, 'generated')
         const dirname = path.join(context, request)
         const relative = path.relative(output, dirname)
